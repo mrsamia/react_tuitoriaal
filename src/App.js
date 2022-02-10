@@ -7,7 +7,7 @@ import Myrouting from './component/Myrouting';
 function App() {
   return (
     <div className="App">
-      <h1>react</h1>
+   
       <BrowserRouter>
         <Mynav />
         <Myrouting />
