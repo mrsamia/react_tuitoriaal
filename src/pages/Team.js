@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from '../containers/Login';
 
 class Team extends Component {
     render() {
@@ -7,9 +8,9 @@ class Team extends Component {
                 <h1>
                 Team
                 </h1>
-                <h1>
-                Team react
-                </h1>
+               <form>
+                   <Login/>
+               </form>
             </div>
         );
     }

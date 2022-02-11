@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../component/Button';
 import Input from '../component/Input';
+import Json from '../component/Json';
 
 class About extends Component {
 
@@ -8,6 +9,18 @@ class About extends Component {
         alert("Button is Clicked");
     }
 
+    constructor(){
+        super();
+        this.state={
+            tittle:"Input Feild",
+            username:" "
+        }
+    }
+    
+    onchangehndler=(event)=>{
+        var myvalue= event.target.value;
+        this.setState({username:myvalue})
+      }
 
     render() {
         return (
@@ -15,8 +28,11 @@ class About extends Component {
                 <h1>About</h1>
                 <Button clsname="btn btn-danger" name="Read More" onclck={this.click} style={{height:'50px',width:'150px',fontSize:20 }}/>
                 <br></br>
-                <Input name="UserName" placeholder="Your Name"/>
+                <h6>Name:{this.state.username}</h6>
+                <Input name="UserName" placeholder="Your Name" onchangehndler={this.onchangehndler}/><br></br>
+                <Input name="Address" placeholder="Address"/><br></br>
               
+              <Json/>
 
             </div>
         );

@@ -17,27 +17,18 @@ import React, { Component } from 'react';
 class Input extends Component {
 
 
-constructor(){
-    super();
-    this.state={
-        tittle:"Input Feild",
-        username:" "
-    }
-}
 
 
-onchangehndler=(event)=>{
-  var myvalue= event.target.value;
-  this.setState({username:myvalue})
-}
+// onchangehndler=(event)=>{
+//   var myvalue= event.target.value;
+//   this.setState({username:myvalue})
+// }
 
 
     render() {
         return (
             <div>
-                <h6>{this.state.tittle}</h6>
-                <h6>{this.state.username}</h6>
-                 <input name={this.props.name} placeholder={this.props.placeholder} onChange={this.onchangehndler}/>
+                 <input name={this.props.name} placeholder={this.props.placeholder} onChange={this.props.onchangehndler}/>
             </div>
         );
     }
