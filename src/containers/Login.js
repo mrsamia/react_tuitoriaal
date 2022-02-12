@@ -4,14 +4,13 @@ import '../style/input.css';
 
 class Login extends Component {
 
-
     constructor() {
         super();
         this.state = {
-            firstname: " ",
-            lastname: " ",
-            email: " ",
-            password: " "
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: ""
         }
     }
 
@@ -23,20 +22,29 @@ class Login extends Component {
     }
 
     render() {
-        console.log(this.state);
+
         return (
+
             <div>
-                <h6>FirstName: {this.state.firstname}</h6>
-                <Index name="firstname" placeholder="Enter Firstname" onChange={this.onChangeHandler} /><br></br>
+                <div>
+                    <h6>FirstName: {this.state.firstname}</h6>
+                    <Index name="firstname" placeholder="Enter Firstname" onChange={this.onChangeHandler} /><br></br>
+                </div>
 
-                <h6>LastName:  {this.state.lastname}</h6>
-                <Index name="lastname" placeholder="Enter Lastname" onChange={this.onChangeHandler} /><br></br>
+                <div>
+                    <h6>LastName:  {this.state.lastname}</h6>
+                    <Index name="lastname" placeholder="Enter Lastname" onChange={this.onChangeHandler} /><br></br>
+                </div>
 
-                <h6>Email:{this.state.email}</h6>
-                <Index name="email" placeholder="Enter Email" onChange={this.onChangeHandler} /><br></br>
+                <div>
+                    <h6>Email:{this.state.email}</h6>
+                    <Index name="email" placeholder="Enter Email" onChange={this.onChangeHandler} /><br></br>
+                </div>
 
-                <h6>Password:{this.state.password}</h6>
-                <Index name="password" placeholder="Enter Password" onChange={this.onChangeHandler} /><br></br>
+                <div>
+                    <h6>Password:{this.state.password}</h6>
+                    <Index name="password" placeholder="Enter Password" onChange={this.onChangeHandler} /><br></br>
+                </div>
 
             </div>
         );
