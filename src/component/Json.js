@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// TODO JSON লিস্ট আলাদা file e করে ম্যাপিং use করতে চাই 
 
 class Json extends Component {
     render() {
@@ -22,14 +23,18 @@ class Json extends Component {
             }
         ]
 
-        const dataitem=mylist.map((data)=>{
+        const dataitemcity=mylist.map((data)=>{
             return <option>{data.city}</option>
         });
 
+        const dataitemZip=mylist.map((data)=>{
+            return <option>{data.zip}</option>
+        });
 
         return (
             <div>
-                <select>{dataitem}</select>
+                <select>{dataitemcity}</select> 
+                <select>{dataitemZip}</select>  
             </div>
         );
     }

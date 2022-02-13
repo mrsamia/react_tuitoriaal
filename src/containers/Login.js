@@ -17,35 +17,35 @@ class Login extends Component {
     onChangeHandler = (event) => {
         const myname = event.target.name;
         const myvalue = event.target.value;
-        console.log(myname, myvalue)
         this.setState({ [myname]: myvalue });
     }
 
     render() {
-
+        
         return (
 
             <div>
-                <div>
+                
+                 <div>
                     <h6>FirstName: {this.state.firstname}</h6>
                     <Index name="firstname" placeholder="Enter Firstname" onChange={this.onChangeHandler} /><br></br>
                 </div>
 
-                <div>
+                {this.state.firstname.toLowerCase()==="rony" &&<div>
                     <h6>LastName:  {this.state.lastname}</h6>
                     <Index name="lastname" placeholder="Enter Lastname" onChange={this.onChangeHandler} /><br></br>
-                </div>
+                </div>}
 
-                <div>
+               { this.state.lastname.toLowerCase()==="mim" && <div>
                     <h6>Email:{this.state.email}</h6>
                     <Index name="email" placeholder="Enter Email" onChange={this.onChangeHandler} /><br></br>
-                </div>
+                </div>}
 
-                <div>
+               {this.state.email.toLowerCase()==="15203060@iubat.edu" && <div>
                     <h6>Password:{this.state.password}</h6>
                     <Index name="password" placeholder="Enter Password" onChange={this.onChangeHandler} /><br></br>
-                </div>
-
+                </div>}
+                
             </div>
         );
     }
