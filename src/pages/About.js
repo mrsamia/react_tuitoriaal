@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../component/Button';
+import Hook from '../component/Hook';
+import HookPrack from '../component/HookPrac';
 import Input from '../component/Input';
 import Json from '../component/Json';
 
@@ -32,7 +34,9 @@ class About extends Component {
                 <Input name="UserName" placeholder="Your Name" onchangehndler={this.onchangehndler}/><br></br>
                 <Input name="Address" placeholder="Address"/><br></br>
               
-              <Json/>
+              <Json/><br></br><br></br>
+              <Hook/><br></br><br></br>
+              <HookPrack/>
 
             </div>
         );
