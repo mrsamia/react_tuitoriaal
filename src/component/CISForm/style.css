@@ -1,0 +1,21 @@
+.cis-form{
+
+}
+
+.question-container{
+    margin-bottom: 20px;
+}
+
+.question-title h6{
+}
+
+.radio-container{
+    display: flex;
+    justify-content: center;
+}
+
+.cis-radio-option{
+    height: unset;
+    width: unset;
+    margin: 5px 10px;
+}
