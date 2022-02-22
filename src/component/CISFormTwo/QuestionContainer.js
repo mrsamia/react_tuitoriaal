@@ -6,7 +6,7 @@ function QuestionContainer(props) {
     return (
         <div>
             <QuestionTitle title={props.question}/>
-            <OptionContainer options={props.options} name={props.question} />
+            <OptionContainer options={props.options} name={props.question}/>
         </div>
     );
 }
